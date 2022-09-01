@@ -1,0 +1,208 @@
+*,body{
+    margin: 0px;
+    padding: 0px;
+}
+
+ul{
+    list-style: none;
+}
+
+header{
+    height: auto;
+}
+
+header .container .contact #margin1{
+    margin-left: 750px;
+}
+
+header .container .contact{
+    color: white;
+    display: inline-block;
+    width: 100%;
+    background-color: lightslategrey;
+}
+
+header .container .contact ul li a{
+    text-decoration: none;
+    color: white;
+}
+header .container nav{
+    height: 50px;
+}
+
+header .container nav .navbar1 {
+    height: 50px;
+    background-color: lightslategrey;
+    display: inline-block;
+    width: 100%;
+}
+
+header .container nav .navbar1 a{
+    color: black;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 50px;
+}
+
+
+header .container nav .navbar1 .navlist {
+    float: right;
+    margin-right: 200px;
+}
+
+header .container nav .navbar1 h1 {
+    float: left;
+    margin-left: 200px;
+    line-height: 50px;
+    
+}
+
+
+header .container .contact ul li{
+    display: inline-block;
+    margin-left: 10px;
+    /*margin-left: 200px;*/
+    
+}
+
+header nav .navbar1{
+}
+header nav .navbar1 ul li{
+    display: inline-block;
+}
+
+
+.navlist ul li{
+padding-left: 10px;
+}
+
+a
+{
+    color: yellow;
+    font-family: Tahoma, Geneva, sans-serif;
+    
+}
+.cong
+{
+    background-color: lightgrey;
+    width: auto;
+}
+
+body
+{
+    font-family: Tahoma, Geneva, sans-serif;
+    color: #fff;
+    background: url(../image/pic4.jpg);
+    background-size: cover;
+}
+
+
+body .question-solution{
+    width: 500px;
+    float: left;
+}
+
+body .main-body .questions{
+    height: auto;
+    background-color: none;
+    text-align: center;
+    
+}
+
+body .main-body .questions a{
+    color: black;
+    text-decoration: none;
+}
+
+body .main-body .question-block{
+    margin: 5px;
+}
+
+body .main-body .solutions{
+    height: auto;
+    background-color: none;
+    text-align: center;
+    
+    margin-top: 10px;
+}
+
+body .main-body .solutions a{
+    color: black;
+    text-decoration: none;
+}
+
+body .main-body .solution-block{
+    margin: 5px;
+}
+
+.request{
+    width: 500px;
+    float: right;
+}
+
+.fac-name{
+    width: 500px;
+    float: right;
+}
+
+
+.question-solution
+{
+    background-color: transparent;
+    padding: 40px;
+    width: 220px;
+    height: auto;
+    float: left;
+    margin-top: 100px;
+    margin-left: 50px;
+    
+}
+
+.request
+{
+    background-color: transparent;
+    padding: 40px;
+    width: 220px;
+    height: auto;
+    float: left;
+    margin-top: 100px;
+    margin-left: 50px;
+    
+}
+
+.fac-name
+{
+    background-color: transparent;
+    padding: 40px;
+    width: 220px;
+    height: auto;
+    float: left;
+    margin-top: 100px;
+    margin-left: 50px;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

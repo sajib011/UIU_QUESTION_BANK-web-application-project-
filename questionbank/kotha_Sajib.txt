@@ -1,0 +1,74 @@
+CREATE DATABASE questionbank;
+
+CREATE TABLE student(
+    student_id int PRIMARY KEY,
+    student_name varchar(50) NOT NULL,
+    s_email varchar(100)  UNIQUE NOT NULL,
+    password varchar(100)  NOT NULL,
+    s_reg_date Date
+);
+
+
+CREATE TABLE Faculty(
+    Faculty_id int PRIMARY KEY ,
+    Faculty_name varchar(50) NOT NULL,
+    f_email varchar(100)  UNIQUE NOT NULL,
+    f_password varchar(100)  NOT NULL,
+    f_reg_date Date
+);
+
+
+CREATE TABLE Question_Bank (
+    Question_id int AUTO_INCREMENT,
+    Question_name varchar(255),
+    Question_path varchar(255),
+    Dept_name varchar(50) NOT NULL,
+    Trimester_name varchar(100) NOT NULL,
+    Course_name varchar(100) NOT NULL,
+    Faculty_id int NOT null,
+    FOREIGN KEY (Faculty_id) REFERENCES faculty(faculty_id),
+    PRIMARY KEY(Question_id,Dept_name,Trimester_name)
+);
+
+CREATE TABLE Rank (
+    Question_id int,
+    Student_id int,
+    rating int NOT NULL,
+    FOREIGN KEY (Question_id) REFERENCES question_bank(Question_id),
+    FOREIGN KEY (Student_id) REFERENCES student(student_id),
+    PRIMARY KEY (Question_id,Student_id)
+);
+
+
+
+
+CREATE TABLE Request (
+    Question_id int,
+    Student_id int,
+    faculty_id int,
+   	dates date,
+    FOREIGN KEY (Question_id) REFERENCES question_bank(Question_id),
+    FOREIGN KEY (Student_id) REFERENCES student(student_id),
+    FOREIGN KEY (faculty_id) REFERENCES faculty(faculty_id),
+    PRIMARY KEY (Question_id,Student_id,faculty_id)
+);
+
+
+
+CREATE TABLE requests (
+    Student_id int,
+    faculty_id int,
+    req_dates date,
+    FOREIGN KEY (Student_id) REFERENCES student(student_id),
+    FOREIGN KEY (faculty_id) REFERENCES faculty(faculty_id)
+);
+
+
+CREATE TABLE Solve (
+    Question_id int,
+    Solve_id int AUTO_INCREMENT,
+    faculty_id int,
+    FOREIGN KEY (Question_id) REFERENCES question_bank(Question_id),
+    FOREIGN KEY (faculty_id) REFERENCES faculty(faculty_id),
+    PRIMARY KEY (Solve_id,Question_id)
+);
